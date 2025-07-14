@@ -1,0 +1,11 @@
+# Blogging Platform API
+
+This project is a API for a personal blogging platform.
+
+## Project URL
+
+[Roadmap Blogging Platform API](https://roadmap.sh/projects/blogging-platform-api)
+
+## Requirements
+
+You will need PHP (V8 or higher) and MySQL to use this app. I reccomend you XAMPP to use this app.
