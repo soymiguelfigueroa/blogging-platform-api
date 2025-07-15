@@ -58,7 +58,16 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $data = $request->validated();
+        $data['tags'] = json_encode($data['tags'] ?? []);
+
+        $post->title = $data['title'] ?? $post->title;
+        $post->content = $data['content'] ?? $post->content;
+        $post->category = $data['category'] ?? $post->category;
+        $post->tags = $data['tags'] ?? $post->tags;
+        $post->update();
+
+        return response()->json($post, 200);
     }
 
     /**
